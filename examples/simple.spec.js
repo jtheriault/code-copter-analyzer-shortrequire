@@ -1,4 +1,9 @@
 'use strict';
-var codeCopter = require('../');
+var codeCopter = require('code-copter'),
+    shortrequire = require('../');
 
-describe('Source code', codeCopter);
+codeCopter.configure({
+    shortrequire: shortrequire
+});
+
+describe('Short Require Example', codeCopter);

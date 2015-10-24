@@ -1,7 +1,7 @@
 {
-  "name": "code-copter",
-  "version": "1.2.0",
-  "description": "Integrate JavaScript static code analysis into test framework",
+  "name": "code-copter-analyzer-shortrequire",
+  "version": "1.0.0",
+  "description": "Analyzer plugin for code-copter v1.1+ to enforce requiring only global modules or files/folders within the same directory.",
   "scripts": {
     "examples": "scripts/run-examples",
     "test": "JASMINE_CONFIG_PATH=jasmine.json istanbul cover `which jasmine`",
@@ -10,27 +10,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jtheriault/code-copter.git"
+    "url": "git@github.com:jtheriault/code-copter-analyzer-shortrequire.git"
   },
   "keywords": [
     "test",
     "jasmine",
     "jshint",
-    "style guide"
+    "style guide",
+    "code-copter"
   ],
-  "author": "Joe Theriault <joseph@yankoismedia.com>",
+  "author": "Joe Theriault <joseph@yankoismedia.com> (http://www.josephtheriault.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jtheriault/code-copter/issues"
-  },
-  "dependencies": {
-    "jasmine": "~2.3.2",
-    "jscs": "~2.2.1",
-    "jshint": "~2.8.0",
-    "walk": "~2.3.9"
+    "url": "https://github.com/jtheriault/code-copter-analyzer-shortrequire/issues"
   },
   "devDependencies": {
+    "code-copter": "^1.1.0",
     "istanbul": "^0.3.22",
+    "jasmine": "~2.3.2",
     "nodemon": "~1.7.1"
   }
 }
