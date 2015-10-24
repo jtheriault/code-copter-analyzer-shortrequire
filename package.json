@@ -1,6 +1,6 @@
 {
   "name": "code-copter-analyzer-shortrequire",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Analyzer plugin for code-copter v1.1+ to enforce requiring only global modules or files/folders within the same directory.",
   "scripts": {
     "examples": "scripts/run-examples",

@@ -9,10 +9,13 @@ function checkLine (line, lineIndex) {
         },
         requireStatement;
 
-    requireStatement = line.match(/require\((['"])\..*?\1\)/);
+    requireStatement = line.match(/\W?require\s*?\(\s*?(['"])[^\1]+\1\s*?\)/);
 
     if (requireStatement !== null) {
-        if (requireStatement[0].match('\\W\\.\\./') || requireStatement[0].match(/\//g).length > 1) {
+        var slashCount = (requireStatement[0].match(/\//g) || []).length,
+            hasPrefix = requireStatement[0].match(/['"]\.\//) !== null;
+
+        if (slashCount - (hasPrefix ? 1 : 0) > 0) {
             status.hasError = true;
             status.message = `${requireStatement[0]} references another directory`;
         }
