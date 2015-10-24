@@ -12,7 +12,7 @@ function checkLine (line, lineIndex) {
     requireStatement = line.match(/\W?require\s*?\(\s*?(['"])[^\1]+\1\s*?\)/);
 
     if (requireStatement !== null) {
-        var slashCount = (requireStatement[0].match(/\//g) || []).length,
+        let slashCount = (requireStatement[0].match(/\//g) || []).length,
             hasPrefix = requireStatement[0].match(/['"]\.\//) !== null;
 
         if (slashCount - (hasPrefix ? 1 : 0) > 0) {
