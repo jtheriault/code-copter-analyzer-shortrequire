@@ -25,7 +25,7 @@
     "url": "https://github.com/jtheriault/code-copter-analyzer-shortrequire/issues"
   },
   "devDependencies": {
-    "code-copter": "^1.1.0",
+    "code-copter": "^1.4.0",
     "istanbul": "^0.3.22",
     "jasmine": "~2.3.2",
     "nodemon": "~1.7.1"

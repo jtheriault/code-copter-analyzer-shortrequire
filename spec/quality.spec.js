@@ -2,8 +2,11 @@
 var codeCopter = require('code-copter');
 
 codeCopter.configure({
-    jscs: true,
-    jshint: true
+    analyzer: {
+        jscs: true,
+        jshint: true
+    },
+    exclude: ['.git', 'coverage','node_modules']
 });
 
 describe('Code quality', codeCopter);

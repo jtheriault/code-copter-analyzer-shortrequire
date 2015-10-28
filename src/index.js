@@ -1,7 +1,6 @@
 'use strict';
 module.exports = shortRequire;
 
-// TODO: Clean and optimize this clumsy thing
 function checkLine (line, lineIndex) {
     var status = {
             hasError: false,
@@ -25,7 +24,8 @@ function checkLine (line, lineIndex) {
 }
 
 /**
- * 
+ * Returns a Jasmine matcher whose compare method validates that each line
+ * does not contain a call to require using an indirect path.
  */
 function shortRequire () {
     return {
@@ -33,7 +33,6 @@ function shortRequire () {
             var result = { pass: true },
                 errors;
 
-            // TODO: Capture line number
             errors = actual.split('\n')
                 .map(checkLine)
                 .filter(status => status.hasError)
